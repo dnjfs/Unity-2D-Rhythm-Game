@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Good Line
+  - Bad Line
+  - Miss Line
+  - Perfect Line
   layers:
   - Default
   - TransparentFX

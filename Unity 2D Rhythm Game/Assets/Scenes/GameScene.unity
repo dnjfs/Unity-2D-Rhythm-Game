@@ -424,6 +424,7 @@ MonoBehaviour:
   - {fileID: 990132944}
   - {fileID: 481027565}
   music: 1
+  autoPerfect: 1
 --- !u!4 &202546634
 Transform:
   m_ObjectHideFlags: 0

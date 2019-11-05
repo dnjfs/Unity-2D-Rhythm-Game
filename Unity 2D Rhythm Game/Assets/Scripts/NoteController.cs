@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class NoteController : MonoBehaviour
 {
@@ -78,10 +79,22 @@ public class NoteController : MonoBehaviour
 
         for (int i = 0; i < notes.Count; i++)
             StartCoroutine(AwaitMakeNote(notes[i]));
+        StartCoroutine(AwaitGameResult(notes[notes.Count - 1].order));
+    }
+
+    IEnumerator AwaitGameResult(int order)
+    {
+        yield return new WaitForSeconds(startingPoint + order * beatInterval + 8.0f);
+        GameResult();
+    }
+
+    void GameResult()
+    {
+        SceneManager.LoadScene("GameResultScene");
     }
 
 
-    void Update()
+        void Update()
     {
         
     }
